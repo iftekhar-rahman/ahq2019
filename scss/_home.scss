@@ -1,0 +1,679 @@
+/*****************************
+00. Home CSS
+*****************************/
+
+/*============== .homepage-slides-area  ================*/
+.homepage-slides-area, .single-slide-item {
+    height: 820px;
+    @include mx-mobile(){
+        height: 260px !important;
+    };
+    @include mx-mobile-lg(){
+        height: 300px !important;
+    };
+    @include all-below-med(){
+        height: 450px;
+    };
+}
+.slide-bg-1{background-image: url(../img/slide-1.jpg)}
+.slide-bg-2{background-image: url(../img/slide-2.jpg)}
+.slide-bg-3{background-image: url(../img/slide-3.jpg)}
+
+.col-lg-9 { /* Stop the bckground interfering with the slidr text */
+	padding-right: 10%;
+	
+	@include mx-mobile-xs(){
+	
+		padding-right: 18%;
+	
+	};
+	
+}
+
+.homepage-slides-area{
+    @extend %posrelative;
+    @include all-below-med(){
+        margin-top: 70px;
+    };
+    .bmw-shapes{
+        @extend %posabsolute;
+        right: 11.5%;
+        top: 25%;
+        @extend %zindex2;
+        @include all-below-med(){
+            display: none;
+        };
+        @include mx-desktops(){
+            right: 5%;
+            width: 380px
+        };
+        @include mx-large-desktops(){
+            width: 370px;
+            right: 12%;
+        };
+    }
+    .bmw-cross1{
+        @extend %posabsolute;
+        left: 5%;
+        bottom: 27%;
+        @extend %zindex2; 
+        @include mx-mobile(){
+            bottom: 14%;
+            left: 5%;
+            img {
+                max-width: 50px;
+            }
+        };
+        @include mx-mobile-lg(){
+            bottom: 14%;
+            left: 12%;
+            img {
+                max-width: 50px;
+            }
+        };
+        @include mx-tablet(){
+            left: 7%;
+            bottom: 9%;
+            /* display: none; */
+            width: 62px;
+        };
+        @include mx-desktops(){
+            display: none;
+        };
+        @include mx-large-desktops(){
+            left: 2%;
+            bottom: 18%;
+        };
+    }
+    .bmw-cross2{
+        @extend %posabsolute;
+        left: 10%;
+        bottom: 14%;
+        @extend %zindex2; 
+        @include mx-mobile(){
+            bottom: 13%;
+            left: 26%;
+            img {
+                max-width: 30px;
+            }
+        };
+        @include mx-mobile-lg(){
+            bottom: 13%;
+            left: 26%;
+            img {
+                max-width: 30px;
+            }
+        };
+        @include mx-tablet(){
+            left: 20%;
+            bottom: 7%;
+        };
+    }
+}
+.single-slide-item {
+    @extend %backgroundimage;
+    @extend %slide-text-color;
+    font-size: 27px;
+    @include mx-tablet(){
+        padding-bottom: 40px;
+    };
+    @include mx-desktops(){
+        background-position: 83% 0px;
+    };
+    @include mx-large-desktops(){
+        background-position: 84% 0px;
+    };
+    @include mx-extra-large-desktops(){
+        background-position: 100% 0px;
+    };
+    h2 {
+        font-size: 67px;
+        @extend %uppercase;
+        @extend %primary-color;
+        @include all-below-med(){
+            font-size: 30px;
+        };
+        @include mx-mobile(){
+            margin: 0;
+        };
+    }
+    h3 {
+        @extend %primary-color;
+        font-size: 37px;
+        font-weight: 400;
+        margin-bottom: 42px;
+        
+        @include all-below-med(){
+            font-size: 24px;
+        };
+        @include mx-mobile-lg(){
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 120px 0 0;
+            line-height: 28px;
+        };
+        @include mx-mobile(){
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 120px 0 0;
+            line-height: 28px;
+        };
+    }
+    .slide-text{
+        @include mx-mobile-lg(){
+            display: none;
+        }; 
+        @include mx-mobile(){
+            display: none;
+        }; 
+        @include mx-tablet(){
+            margin-right: 250px;
+        }; 
+        @include mx-desktops(){
+            margin-right: 110px;
+        }; 
+        @include mx-large-desktops(){
+            margin-right: 15px;
+        };
+        @include mx-extra-large-desktops(){
+            margin-right: 20px;
+        };
+        @extend %posrelative;
+        z-index: 3;
+		
+		a {
+			font-size: 0.8em;
+			color: #25a9c1;
+			
+		}
+    }
+    @include all-below-med(){
+        font-size: 18px;
+        background-position: 77% 0;
+    };
+}
+.slide-title {
+    @extend %posrelative;
+    z-index: 3;
+    @include mx-mobile-lg(){
+        margin-top: -50px !important;
+    };
+    @include mx-mobile(){
+        margin-top: -70px;
+    };
+    @include mx-tablet(){
+        margin-right: 200px;
+    }; 
+    @include mx-desktops(){
+        margin-right: 100px;
+    }; 
+    @include mx-large-desktops(){
+        margin-right: 90px;
+    };
+    @include mx-extra-large-desktops(){
+        margin-right: 90px;
+    };
+}
+.homepage-slides-area .owl-dots {
+    @extend %textleft;
+    @extend %zindex2;
+    @extend %posrelative;
+    width: 1110px;
+    @extend %margin0auto;
+    bottom: 55px;
+    @include mx-desktops(){
+        width: 935px;
+    };
+    @include mx-tablet(){
+        width: 690px;
+    };
+    @include all-below-med(){
+        width: 100%;
+        bottom: 27px;
+        text-align: center;
+    };
+    div {
+        border-radius: 0;
+        width: 270px;
+        height: 55px;
+        font-size: 25px;
+        @extend %white-color;
+        @extend %textcenter;
+        padding: 9px 0;
+        margin: 0 20px 0 0;
+        @extend %basetransition;
+        @include mx-tablet(){
+            width: 215px;
+            padding: 9px 0;
+            margin: 0 10px 0 0;
+        };
+        &.active {
+            @extend %primary-deep-bg-color;
+        }
+        @include all-below-med(){
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            margin: 0 15px;
+        };
+        
+    }
+}
+.hborder{
+    @extend %posrelative;
+    z-index: 3;
+    &:after {
+        z-index: 3;
+        @extend %pseudo;
+        left: -1px;
+        bottom: -27px;
+        width: 130px;
+        height: 1px;
+        @extend %primary-bg-color;
+        @include mx-mobile(){
+            display: none;
+        };
+        @include mx-mobile-lg(){
+            display: none;
+        };
+    }
+}
+/* Owl Carousel Content animation */
+.owl-carousel {
+    @extend %displaynone;
+    @extend %posrelative;
+    @extend %w100;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-carousel.owl-loaded {
+    @extend %displayblock;
+}
+.owl-carousel .owl-stage {
+    @extend %posrelative;
+    -ms-touch-action: pan-Y;
+    -moz-backface-visibility: hidden;
+}
+.owl-carousel .owl-stage::after {
+    @extend %displayblock;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    content: '.';
+    visibility: hidden;
+}
+.owl-carousel .owl-stage-outer {
+    @extend %posrelative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    @extend %overflowhidden;
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}  
+@-webkit-keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translate3d(300%, 0, 0);
+    transform: translate3d(300%, 0, 0);
+    }
+
+    to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translate3d(300%, 0, 0);
+    transform: translate3d(300%, 0, 0);
+    }
+
+    to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.homepage-slides-wrap .owl-item.active .fade-left{
+    animation: fadeInLeft 2s 1;
+}
+.homepage-slides-wrap .owl-item.active .fade-right{
+    animation: fadeInRight 2s 1;
+}
+
+
+
+
+/*===================.dealer-management-area========================*/
+.dealer-management-bg{
+    background-image: url(../img/dealer-bg.jpg)
+}
+.dealer-management-area{
+    @extend %backgroundimage;
+    padding: 190px 0 140px 0;
+    .dealer-pluses{
+        @extend %backgroundimage;
+        @extend %posabsolute;
+        left: 475px;
+        top: -25px;
+        z-index: 1;
+        img{
+            max-width: 135px;
+            @include all-below-med(){
+                max-width: 120px;
+            };
+            @include mx-mobile(){
+                max-width: 85px;
+            };
+            @include mx-mobile-xs(){
+                max-width: 70px;
+            };
+        }
+        @include all-below-med(){
+            left: 16%;
+            top: 135px;
+        };
+        @include mx-tablet(){
+            left: 27%;
+            // top: 130px;
+        };
+        
+        @include mx-mobile(){
+            left: 37%;
+            top: 130px;
+        };
+        @include mx-mobile-dxs(){
+            left: 39%;
+            top: 180px;
+        };
+        @include mx-mobile-lg(){
+            left: 36%;
+            top: 134px;
+        };
+        
+    }
+    .container{
+        @extend %posrelative;
+    }
+    .dealer-management-car{
+        @extend %zindex2;
+        @extend %posrelative;
+        @extend %textcenter;
+        [data-aos^=zoom][data-aos^=zoom] {
+            opacity: 1;
+        }
+        @include mx-tablet(){
+            padding-left: 160px;
+        };
+        @include mx-mobile-lg(){
+            text-align: right;
+            img{
+                max-width: 300px;
+            }
+        };
+        @include mx-mobile(){
+            text-align: right;
+            img{
+                max-width: 270px;
+            }
+        };
+        @include mx-mobile-xs(){
+            img{
+                max-width: 230px;
+            }
+        };
+        .d-table-cell{
+            vertical-align: middle;
+        }
+    }
+    [data-aos=fade-right] {
+        transform: translate3d(-350px,0,0);
+        transition-duration: 2s !important;
+    }
+    .dealer-management-text{
+        @extend %posrelative;
+        z-index: 3;
+        @include mx-tablet(){
+            margin-bottom: 20px;
+        };
+        @include mx-mobile-lg(){
+            margin-bottom: 50px;
+        };
+    }
+    @include all-below-med(){
+        padding: 30px 0 20px;
+    };
+}
+
+
+
+/*===================.social-media-management-area========================*/
+.social-media-bg{background-image: url(../img/social-media-bg.jpg)}
+
+.social-media-management-area{
+    @extend %overflowhidden;
+    @extend %posrelative;
+    @extend %backgroundimage;
+    padding: 160px 0 130px 0;
+    @extend %white-color;
+    .section-title{
+        @extend %white-color;
+        @include mx-mobile(){
+            margin-right: 100px;
+        };
+    }
+    .boxed-btn{
+        @extend %white-color;
+        border-color: $color-white;
+        &:after{
+            @extend %white-bg-color;
+        }
+        &:hover{
+            @extend %primary-color;
+        }
+    }
+    .hatched-circle {
+        @extend %posabsolute;
+        left: 5%;
+        top: 50%;
+        margin-top: -112px;
+        @include mx-tablet(){
+            img{
+                max-width: 140px;
+            }
+        };
+        @include all-below-med(){
+            img{
+                max-width: 130px;
+            }
+        };
+        
+    }
+    .social-plus{
+        @extend %posabsolute;
+        right: 13%;
+        top: 18%;
+        [data-aos^=fade][data-aos^=fade]{
+            width: 30px;
+            height: 30px;
+        }
+        @include all-below-med(){
+            top: 7%;
+        };
+    }
+    [data-aos=fade-left] {
+        transform: translate3d(700px,0,0);
+        transition-duration: 2s !important;
+    }
+    [data-aos=fade-up-right] {
+        transform: translate3d(-100px,100px,0) rotate(-90deg);
+        @include mx-mobile(){
+            display: none;
+        };
+    }
+    @include mx-mobile-xs(){
+        [data-aos=fade-left] {
+            transform: translate3d(249px, 165px, 0) !important;
+        }
+    };
+    @include all-below-med(){
+        [data-aos=fade-left] {
+            transform: translate3d(100px,0,0);
+        }
+    };
+    @include all-below-med(){
+        padding: 50px 0;
+    };
+}
+
+
+/*===================.lead-generation-area========================*/
+.lead-generation-bg{background-image: url(../img/lead-generationg-bg.jpg)}
+.lead-generation-area{
+    @extend %posrelative;
+    @extend %backgroundimage;
+    padding: 150px 0 140px 0;
+    .series-dots{
+        width: 225px;
+        height: 109px;
+        @extend %posabsolute;
+        left: 26%;
+        top: 24%;
+        @include mx-mobile(){
+            display: none;
+        };
+        @include mx-mobile-lg(){
+            left: 37%;
+            top: 14%;
+            width: 150px;
+        };
+        @include mx-tablet(){
+            top: 10%;
+            width: 180px;
+        };
+    }
+    .waves{
+        width: 141px;
+        height: 19px;
+        @extend %posabsolute;
+        left: 33%;
+        bottom: 16%;
+        @include mx-mobile(){
+            left: 48%;
+        };
+    }
+    .col-lg-5{
+        padding-right: 0;
+    }
+    [data-aos=fade-right] {
+        transform: translate3d(-350px,0,0);
+        transition-duration: 2s !important;
+    }
+    @include all-below-med(){
+        padding: 50px 0;
+    };
+}
+
+
+/*===================.reputation-management-area========================*/
+.reputation-management-bg{background-image: url(../img/reputationg-bg.jpg)}
+
+.reputation-management-area{
+    @extend %posrelative;
+    @extend %backgroundimage;
+    padding: 160px 0 130px 0;
+    @extend %white-color;
+    .section-title{
+        @extend %white-color;
+        @include mx-mobile(){
+            margin-right: 50px;
+        };
+    }
+    .reputaion-cross1{
+        @extend %posabsolute;
+        left: 5%;
+        top: 20%;
+        img{
+            @include all-below-med(){
+                max-width: 70px;
+            };  
+        }
+        @include mx-mobile(){
+            left: 15px;
+        };
+        @include all-below-med(){
+            top: 5%;
+        };
+        @include mx-mobile(){
+            top: 8%;
+            left: 65%;
+        };
+    }
+    .reputaion-cross2{
+        width: 77px;
+        height: 77px;
+        @extend %posabsolute;
+        right: 10%;
+        bottom: 15%;
+        @include mx-mobile(){
+            display: none
+        };
+    }
+    [data-aos=fade-up-left] {
+        transform: translate3d(600px,120px,0) rotate(90deg);
+        transition: 2s !important;
+        @include all-below-med(){
+            transform: translate3d(0px,0px,0) rotate(90deg);
+        };
+    }
+    [data-aos=fade-down-right] {
+        transform: translate3d(-100px,-100px,0) rotate(-90deg);
+    }
+    .boxed-btn{
+        @extend %white-color;
+        border-color: $color-white;
+        &:after{
+            @extend %white-bg-color;
+        }
+        &:hover{
+            @extend %primary-color;
+        }
+    }
+    @include all-below-med(){
+        padding: 50px 0;
+    };
+}
+
+

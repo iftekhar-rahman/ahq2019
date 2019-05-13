@@ -1,0 +1,80 @@
+/*
+###############
+contact-us.scss
+BG 9-5-19
+###############
+*/
+
+
+.contact {
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	h3.section-subtitle {
+	
+		font-size: 1.5rem;
+		margin-bottom: 5px;
+		
+	}
+	
+	.contactBlock {
+	
+		h3.contactTitle {
+		
+			color:#25a9c1;
+			font-weight: 300;
+			margin-bottom: 4px;
+			font-size: 2em;
+			
+		}
+		
+		p {
+			margin-bottom: 40px;
+			font-size: 18px;
+		}
+		
+	
+	}
+	
+	form{
+	
+		margin-top: 40px;
+	
+		input, textarea {
+			margin-bottom:35px;
+			font-size: 20px;
+			border-radius:5px;
+			padding: 2px 10px;
+		}
+		
+		input {
+			width: 95%;
+		}
+
+		textarea {
+			width:97%;
+			min-height:50px;
+			
+		}
+		
+		
+		span {
+			margin: 0 0 0 6px;
+		}
+		
+		button.btn {
+			color: #fff;
+			background-color: #25a9c1;
+			border-color: #25a9c1;		
+			margin-right: 20px;
+			margin-bottom: 15px;
+		}
+		
+		
+	
+	
+	}
+
+
+}

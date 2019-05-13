@@ -1,0 +1,38 @@
+/*****************************
+00. Button CSS
+*****************************/
+
+.boxed-btn, input[type="submit"], button[type="submit"] {
+    padding: 8px 28px;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid $primary-color;
+    @extend %posrelative;
+    z-index: 2;
+    @extend %primary-color;
+    &:after {
+        @extend %pseudoabsolute;
+        @extend %primary-bg-color;
+        transform: scaleY(0);
+        @extend %basetransition;
+    }
+    &:hover:after {
+        transform: scaleY(1);
+    }
+    &:hover {
+        @extend %white-color;
+    }
+    @include all-below-med(){
+        padding: 5px 22px;
+        font-weight: 300;
+        font-size: 14px;
+    };
+}
+
+.boxed-btn2{
+    border: 1px solid $secondary-color;
+    @extend %secondary-color;
+    &:hover {
+        border-color: $primary-color;
+    }
+}

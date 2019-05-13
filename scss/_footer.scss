@@ -1,0 +1,86 @@
+/*****************************
+00. Footer CSS
+******************************/
+
+.footer-area{
+    @extend %primary-bg-color;
+    @extend %white-color;
+    a{
+        @extend %white-color;
+        &:hover{
+            @extend %secondary-color;
+            @extend %basetransition;
+        }
+    }
+    .logo{
+        margin-top: 30px;
+        margin-bottom: 60px;
+        height: 70px;
+        img{
+            @include all-below-med(){
+                max-width: 200px;
+            }; 
+        }
+        @include all-below-med(){
+            margin-bottom: 30px;
+        };
+        @include mx-mobile-lg(){
+            text-align: center;
+        };
+        @include mx-mobile(){
+            text-align: center;
+        };
+    }
+    address {
+        line-height: 22px;
+    }
+    .single-footer-item {
+        @include all-below-med(){
+            margin-bottom: 30px;
+        };
+    }
+    .single-footer-item h4{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .single-footer-item.quick-links ul li{
+        margin-bottom: 7px;
+    }
+    .copyright-text {
+        font-size: 14px;
+        padding: 17px 0;
+        border-top: 1px solid $secondary-color;
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.scroll-to-top {
+    @extend %posfixed;
+    @extend %white-bg-color;
+    @extend %primary-color;
+    @extend %textcenter;
+    @extend %displaynone;
+    z-index: 9999;
+    right: 50px;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+    line-height: 68px;
+    font-size: 60px;
+    cursor: pointer;
+    @extend %basetransition;
+    &:hover{
+        @extend %primary-deep-bg-color;
+        @extend %white-color;
+    }
+    @include all-below-med(){
+        right: 15px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
+        line-height: 0;
+        font-size: 45px;
+    };
+}

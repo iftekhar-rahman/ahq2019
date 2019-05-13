@@ -1,0 +1,314 @@
+
+/*****************************
+00. InnerAutoHQ CSS
+*****************************/
+
+/*=============.quicklinks-area==================*/
+.quicklinks-area{
+    padding-top: 150px;
+    background-color: $quicklinks-bg-color;
+    li{
+        @extend %displayinline;
+        a{
+            @extend %menu-color;
+            font-size: 19px;
+            padding: 14px 30px 14px 0;
+            &:hover{
+                @extend %primary-color;
+            }
+            @include mx-mobile(){
+                font-size: 14px;
+            };
+            @include mx-mobile-lg(){
+                font-size: 14px;
+            };
+        }
+    }
+    @include all-below-med(){
+        padding-top: 80px;
+    };
+    
+}
+
+/*==============.hero-area==================*/ 
+.hero-bg1{background-image: url(../img/hero-bg-1.jpg)}
+.hero-area{
+    @extend %backgroundimage;
+    @extend %posrelative;
+    height: 445px;
+	margin-bottom: 45px;
+	background-color: #f6f6f6;
+    @include mx-large-desktops(){
+        background-position: 67% 0;
+    };
+    @include mx-desktops(){
+        background-position: 70% 0;
+    };
+    @include all-below-med(){
+        background-position: 65% 0;
+        height: 270px;
+		margin-bottom: 0;
+    };
+    @include mx-mobile-lg(){
+        background-position: 71% 0;
+    };
+    .hero-text{
+        @extend %primary-color;
+        font-size: 27px;
+        margin-right: 100px;
+        @include mx-desktops(){
+            margin-right: 0px;
+        };
+        @include all-below-med(){
+            font-size: 24px;
+            margin-right: 220px;
+        };
+        @include mx-mobile(){
+            font-size: 16px;
+            margin: -92px 0px 0 0;
+        };
+        @include mx-mobile-lg(){
+            font-size: 16px;
+        };
+        h1{
+            font-size: 56px;
+            @extend %primary-color;
+            @extend %uppercase;
+            @include all-below-med(){
+                font-size: 30px;
+            };
+            @include mx-mobile(){
+                margin-bottom: 5px;
+            };
+        }
+        @include mx-extra-large-desktops(){
+           
+        };
+    }
+    .hero-shape{
+        @extend %posabsolute;
+        left: 65%;
+        bottom: -13%;
+        @include mx-large-desktops(){
+            left: 63%;
+            bottom: -12%;
+        };
+        @include mx-desktops(){
+            left: 59%;
+        };
+        @include all-below-med(){
+            left: 69%;
+            bottom: 1%;
+            width: 200px;
+        };
+        @include mx-mobile-lg(){
+            left: 64%;
+        };
+        @include mx-mobile(){
+            display: none;
+        };
+    }
+    .round-shape1{
+        @extend %posabsolute;
+        left: 70%;
+        top: 10%;
+        @include mx-mobile(){
+            display: none;
+        };
+    }
+    @include mx-mobile(){
+        background-position: 80% 22px;
+        height: 220px;
+    };
+    
+}
+
+
+
+.service-area.wordy {
+	padding: 30px 0 30px;
+}
+
+/*============== .service-area, .about-area======================*/
+.service-area, .about-area{
+    
+	@extend %sectionpadding;
+    @extend %posrelative;
+    
+	
+	h2.section-title {
+        margin-top: 15px;
+        @include all-below-med(){
+            margin-top: 0px;
+        };
+
+    }
+	
+
+	h3.section-subtitle {
+	
+		font-size: 1.5rem;
+		margin-bottom: 5px;
+		
+	}
+
+	
+	h2, h3 {
+	
+		@include mx-mobile(){
+			text-align: center;
+		};
+	}
+	
+    .boxed-btn2 {
+        margin-top: 5px;
+    }
+    .about-grid{
+        @extend %posabsolute;
+        left: 31%;
+        top: 9%;
+        @include all-below-med(){
+            display: none;
+        };
+        @include mx-desktops(){
+            left: 20%;
+        };
+        @include mx-large-desktops(){
+            left: 28%;
+        };
+    }
+    .about-img{
+        img{
+            @extend %borderradius5;
+        }
+        @include all-below-med(){
+            text-align: center !important;
+            margin-bottom: 30px;
+        };
+
+    }
+    
+	.service-text, .about-text {
+		img {
+			
+			border-radius: 5px;
+			
+			
+			/*-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);*/
+			
+			@include all-below-med(){
+				max-width: 40%;
+			};
+			
+			@include mx-mobile(){
+				max-width: 100%;
+			};
+			
+
+
+		}
+		
+		img.left { float:left; margin: 0 25px 15px 0; }	
+		
+		img.right { float:right; margin: 0 0 15px 25px; }	
+		
+		
+	}
+	
+	ul {
+		margin: 0 25px;
+		list-style: disc;
+		margin-bottom: 1rem;
+	}
+
+	@include all-below-med(){
+        padding: 50px 0;
+    };
+	
+	
+	
+	
+	
+}
+
+.about-area.wordy {
+	padding: 30px 0 30px;
+}
+
+
+/*============== .about-area======================*/
+.about-area{
+    @extend %grey-bg;
+}
+
+
+/*===========.casestudies-area================*/ 
+.casestudies-area {
+    @extend %posrelative;
+    padding: 80px 0 130px;
+    .section-title {
+        margin-top: 20px;
+        @include all-below-med(){
+            margin-top: 0px;
+        };
+    }
+    .boxed-btn2 {
+        margin-top: 5px;
+    }
+    .casestudies-img{
+        img{
+            @extend %borderradius5;
+        }
+        @include all-below-med(){
+            text-align: center !important;
+            margin-bottom: 30px;
+        };
+    }
+    .casestudies-round-shape{
+        @extend %posabsolute;
+        right: 12%;
+        top: 27%;
+        @extend %zindex2;
+        @include all-below-med(){
+            right: 5%;
+            top: 7%;
+        };
+        @include mx-mobile(){
+            right: 3%;
+            top: 2%;
+        };
+        @include mx-desktops(){
+            right: 2%;
+            top: 11%;
+        };
+        @include mx-large-desktops(){
+            right: 2%;
+        };
+        
+    }
+    @include all-below-med(){
+        padding: 50px 0;
+    };
+}
+
+
+.contactSection {
+
+	background-color: #25a9c13d;
+	padding:15px;
+	border-radius:5px;
+	
+	p.contact {
+	
+		a { margin-right: 15px; font-size: 20px; }
+		
+		@include mx-mobile(){
+			text-align: center;
+		}
+	
+	}
+
+}
+
+

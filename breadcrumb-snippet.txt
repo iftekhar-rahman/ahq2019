@@ -1,0 +1,13 @@
+		<?php if(!is_front_page()) { ?>
+		<div class="quicklinks-area">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Automotive SEO</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><?php } ?>
