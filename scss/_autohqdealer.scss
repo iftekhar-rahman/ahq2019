@@ -3,214 +3,349 @@
 00. AutoHQ Dealer CSS
 *****************************/
 
+.header-area.dealer-header{
+    .mainmenu ul{
+        a{
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+}
 
 
 /*==============.hero-area==================*/ 
 .hero-bg2{background-image: url(../img/hero-bg-2.jpg)}
-.hero-area{
-    @extend %backgroundimage;
-    @extend %posrelative;
-    height: 445px;
-	margin-bottom: 45px;
-	background-color: #f6f6f6;
-    @include mx-large-desktops(){
-        background-position: 67% 0;
-    };
-    @include mx-desktops(){
-        background-position: 70% 0;
-    };
-    @include all-below-med(){
-        background-position: 65% 0;
-        height: 270px;
-		margin-bottom: 0;
-    };
-    @include mx-mobile-lg(){
-        background-position: 71% 0;
-    };
-    .hero-text{
-        @extend %primary-color;
-        font-size: 27px;
-        margin-right: 100px;
-        @include mx-desktops(){
-            margin-right: 0px;
-        };
-        @include all-below-med(){
-            font-size: 24px;
-            margin-right: 220px;
-        };
-        @include mx-mobile(){
-            font-size: 16px;
-            margin: -92px 0px 0 0;
-        };
-        @include mx-mobile-lg(){
-            font-size: 16px;
-        };
-        h1{
-            font-size: 56px;
-            @extend %primary-color;
-            @extend %uppercase;
-            @include all-below-med(){
-                font-size: 30px;
-            };
-            @include mx-mobile(){
-                margin-bottom: 5px;
-            };
-        }
-        @include mx-extra-large-desktops(){
-           
-        };
-    }
-    .hero-shape{
-        @extend %posabsolute;
-        left: 65%;
-        bottom: -13%;
-        @include mx-large-desktops(){
-            left: 63%;
-            bottom: -12%;
-        };
-        @include mx-desktops(){
-            left: 59%;
-        };
-        @include all-below-med(){
-            left: 69%;
-            bottom: 1%;
-            width: 200px;
-        };
-        @include mx-mobile-lg(){
-            left: 64%;
-        };
-        @include mx-mobile(){
-            display: none;
-        };
-    }
-    .round-shape1{
-        @extend %posabsolute;
-        left: 70%;
-        top: 10%;
-        @include mx-mobile(){
-            display: none;
-        };
-    }
-    @include mx-mobile(){
-        background-position: 80% 22px;
-        height: 220px;
-    };
-    
-}
 
-.hero-area.hero-area-2  {
-    position: relative;
-    color: #fff;
-}
-.hero-area.hero-area-2 .hero-text h1{
-    color: #fff;
-}
-.hero-area.hero-area-2 .hero-text{
-    color: #fff;
-}
-.hero-area-2 .car-photo {
-    position: absolute;
-    right: 4%;
-    bottom: -20%;
-}
-.hero-area-2 .hero-text {
-    margin-right: 0;
-    color: #fff;
-}
-.hero-area-2 .hero-text h1 {
-    color: #fff;
-}
-.hero-area-2 .hborder:after {
-    background-color: #fff;
-}
-.hero-area-2 .hero-shape {
-    left: 48%;
-    bottom: 0%;
-    z-index: 2;
+.hero-area-2 {
+    @extend %posrelative;
+    margin-bottom: 0;
+    .hero-text.hero-tex-2 h1 {
+        font-size: 49px;
+        margin-bottom: 5px;
+        @extend %white-color;
+        @include all-below-med{
+            font-size: 32px;
+        }
+        @include mx-mobile{
+            font-size: 28px;
+        }
+        @include mx-mobile-lg{
+            margin-top: -85px;
+        }
+        @include mx-desktops{
+            font-size: 47px;
+        }
+    }
+    .hero-text.hero-tex-2{
+        margin-right: 0;
+        @extend %white-color;
+        
+        @include all-below-med{
+            font-size: 20px;
+        }
+        @include mx-mobile{
+            font-size: 18px;
+            margin: -77px 0px 0 0;
+        }
+    }
+    .car-photo {
+        @extend %posabsolute;
+        right: 4%;
+        bottom: -18%;
+        @include all-below-med{
+            max-width: 400px;
+            bottom: -16%;
+            right: 0;
+        }
+        @include mx-mobile{
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        @include mx-desktops{
+            right: 0%;
+            bottom: -12%;
+            img{
+                max-width: 150px;
+            }
+            .herocar {
+                max-width: 570px;
+            }
+        }
+        @include mx-large-desktops{
+            right: 0%;
+            bottom: -15%;
+            .herocar {
+                max-width: 700px;
+            }
+        }
+        
+    }
+    .hborder:after {
+        @extend %white-bg-color;
+    }
+    .hero-shape {
+        left: -11%;
+        bottom: 26%;
+        @extend %zindex2;
+        @include all-below-med{
+            max-width: 100px;
+        }
+        @include mx-large-desktops{
+            left: -15%;
+            bottom: 25%;
+        }
+    }
+    [data-aos=fade-right] {
+        transform: translate3d(-200px, 0, 0);
+        transition-duration: 2s ease !important;
+    }
+   
 }
 
 
 /*================.we-are-area-1=====================*/
 .we-are-area-1 {
-    padding: 140px 0 130px;
-}
-.we-are-img img {
-    @extend %borderradius5;
-}
-.we-are-text {
-    padding-right: 50px;
+    padding: 140px 0 135px;
+    @include all-below-med{
+        padding: 60px 0 40px;
+    }
+    .we-are-photo {
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+        }
+    }
+    .we-are-photo img {
+        @extend %borderradius5;
+    }
+    .we-are-text {
+        padding-right: 50px;
+        @include all-below-med{
+            padding-right: 0px;
+        }
+        @include mx-desktops{
+            padding-right: 0px;
+        }
+    }
 }
 
 
 /*==============.customers-demands-area==================*/ 
 .customers-demands-area {
     background-color: #CFEEF3;
-    padding: 80px 0 70px;
+    padding: 85px 0 70px;
+    @include all-below-med{
+        padding: 60px 0;
+    }
+    @extend %posrelative;
+    .customers-demand {
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+        }
+    }
+    .customers-demand img{
+        @extend %borderradius5;
+    }
+    .customers-demands-text {
+        padding-left: 50px;
+        @include all-below-med{
+            padding-left: 0px;
+        }
+        @include mx-desktops{
+            padding-left: 0px;
+        }
+    }
+    .cstd-shape {
+        @extend %posabsolute;
+        left: 5%;
+        bottom: -9%;
+    }
+    .round-3 {
+        @extend %posabsolute;
+        right: 5%;
+        top: -9%;
+    }
+    [data-aos=fade-up] {
+        transform: translate3d(0px,200px,0px);
+    }
 }
-.customers-demands-text {
-    padding-left: 50px;
-}
-.customers-demand img{
-    @extend %borderradius5;
-}
+
 
 /*============.we-are-area-2==============*/ 
 .we-are-area-2 {
     padding: 120px 0 70px;
+    @include all-below-med{
+        padding: 60px 0 40px;
+    }
+    .we-are-img{
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+        }
+    }
+    .we-are-text {
+        padding-right: 30px;
+        @include all-below-med{
+            padding-right: 0px;
+        }
+        @include mx-desktops{
+            padding-right: 0px;
+        }
+    }
 }
+
 
 /*======.smart-search-area========*/ 
 .smart-search-area {
-    padding: 70px 0;
+    padding: 70px 0 75px;
+    @include all-below-med{
+        padding: 40px 0px;
+    }
+    .smart-search-text {
+        padding-left: 70px;
+        margin-top: 35px;
+        @include all-below-med{
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+        @include mx-desktops{
+            padding-left: 30px;
+            margin-top: 20px;
+        }
+    }
+    .smart-search-photo img{
+        @extend %borderradius5;
+    }
+    .smart-search-photo {
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+        }
+    }
 }
-.smart-search-text {
-    padding-left: 50px;
-}
-.smart-search-img img{
-    @extend %borderradius5;
-}
+
 
 /*==========.online-reservation-area===============*/ 
 .online-reservation-area {
-    padding: 70px 0;
-}
-.online-reservation-text {
-    padding-right: 100px;
+    padding: 75px 0;
+    @include all-below-med{
+        padding: 40px 0px;
+    }
+    .online-reservation-text {
+        padding-right: 100px;
+        @include all-below-med{
+            padding-right: 0px;
+        }
+        @include mx-desktops{
+            padding-right: 20px;
+        }
+    }
+    .online-reservation-photo {
+        margin-top: 30px;
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+            margin-top: 0px;
+        }
+    }
 }
 
 
 /*==========.finance-technology-area============*/ 
 .finance-technology-area {
-    padding: 70px 0;
-}
-.finance-technology-text {
-    padding-left: 100px;
+    padding: 75px 0;
+    @include all-below-med{
+        padding: 40px 0px;
+    }
+    .finance-technology{
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+        } 
+    }
+    .finance-technology-text {
+        padding-left: 100px;
+        margin-top: 50px;
+        @include all-below-med{
+            padding-left: 0px;
+            margin-top: 0px;
+        } 
+        @include mx-desktops{
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+    }
 }
 
 
 /*===========.seo-optimised-area=============*/ 
 .seo-optimised-area {
-    padding: 70px 0 90px;
-}
-.seo-optimised-text {
-    padding-right: 50px;
+    padding: 75px 0 90px;
+    @include all-below-med{
+        padding: 40px 0px;
+    }
+    .seo-optimised-text {
+        padding-right: 50px;
+        @include all-below-med{
+            padding-right: 0px;
+        } 
+        @include mx-desktops{
+            padding-right: 0px;
+        }
+    }
+    .seo-optimised-photo {
+        margin-top: 70px;
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+            margin-top: 0px;
+        } 
+    }
 }
 
 
 /*=========.social-media-area============*/ 
 .social-media-area {
     padding: 90px 0 130px;
-}
-.social-media-text {
-    padding-left: 30px;
-}
-.social-media-text ul li {
-    list-style: outside;
-    padding-left: 20px;
-    margin-left: 18px;
-}
-.social-media-text ul {
-    margin: 20px 0 20px;
+    @include all-below-med{
+        padding: 40px 0px 60px;
+    }
+    @extend %posrelative;
+    .social-media-text {
+        padding-left: 30px;
+        @include all-below-med{
+            padding-left:0px;
+        } 
+        @include mx-desktops{
+            padding-right: 10px;
+        }
+        ul {
+            margin: 20px 0 20px;
+            li {
+                list-style: outside;
+                padding-left: 20px;
+                margin-left: 18px;
+            }
+        }
+    }
+    .scm-grid{
+        @extend %posabsolute;
+        left: 3%;
+        bottom: 13%;
+    }
+    .social-media-photo {
+        margin-top: 50px;
+        @include all-below-med{
+            text-align: center !important;
+            margin-bottom: 15px;
+            margin-top: 0px;
+        } 
+    }
+    [data-aos=fade-left] {
+        transform: translate3d(300px,-100px,0);
+        transition: 3s ease !important;
+    }
 }
 
 
@@ -220,20 +355,82 @@
     color: #fff;
     font-size: 22px;
     padding: 100px 0;
-}
-.contact-area h2 {
-    color: #f54ea2;
-    font-size: 43px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.contact-area h3{
-    font-size: 22px;
-    margin: 0 0 10px;
-}
-.contact-area .phone-number {
-    font-size: 32px;
-    font-weight: 600;
-    display: block;
-    line-height: 1;
+    @extend %posrelative;
+    @include all-below-med{
+        padding: 50px 0;
+        font-size: 18px;
+    }
+    @include mx-mobile{
+        font-size: 14px;
+    }
+    h2 {
+        color: #f54ea2;
+        font-size: 43px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        @include all-below-med{
+           font-size: 30px;
+        }
+        @include mx-mobile{
+            font-size: 23px;
+            margin-bottom: 10px;
+            br{
+                display: none;
+            }
+        }
+    }
+    h3{
+        font-size: 22px;
+        margin: 0 0 10px;
+        @include all-below-med{
+            font-size: 18px;
+        }
+        @include mx-mobile{
+            font-size: 14px;
+        }
+    }
+    .phone-number {
+        @extend %displayblock;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1;
+        @include all-below-med{
+            font-size: 24px;
+        }
+        @include mx-mobile{
+            font-size: 16px;
+        }
+    }
+    .cta-grid {
+        @extend %posabsolute;
+        left: 5%;
+        bottom: 10%;
+    }
+    .cta-round-1 {
+        @extend %posabsolute;
+        right: 0;
+        top: 7%;
+    }
+    .cta-round-2 {
+        @extend %posabsolute;
+        right: 5%;
+        bottom: 0;
+    }
+    .contact-text {
+        padding: 0 35px;
+        @include all-below-med{
+            padding: 0 0;
+        } 
+        @include mx-desktops{
+            padding: 0;
+        }
+    }
+    [data-aos=fade-left] {
+        transform: translate3d(300px,0px,0);
+        transition: 3s ease !important;
+    }
+    [data-aos=fade-right] {
+        transform: translate3d(-200px,0,0);
+        transition: 2s ease !important;
+    }
 }
