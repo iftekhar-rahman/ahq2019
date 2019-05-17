@@ -532,7 +532,6 @@ select {
     .homepage-slides-area .target-icon {
       left: 7%;
       bottom: 9%;
-      /* display: none; */
       width: 62px; } }
   @media (max-width: 991px) {
     .homepage-slides-area .target-icon {
