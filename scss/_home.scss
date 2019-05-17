@@ -38,9 +38,12 @@
     };
     .slide-car{
         @extend %posabsolute;
-        right: 6%;
+        right: 3%;
         bottom: -5px;
         @extend %zindex2;
+        @include mx-large-desktops{
+            right: 1%;
+        }
     }
     .slide-round{
         @extend %posabsolute;
@@ -128,8 +131,8 @@
     }
     .statistic-icon{
         @extend %posabsolute;
-        right: 9%;
-        top: 45%;
+        right: 8%;
+        top: 44%;
         @extend %zindex2; 
         @include mx-mobile(){
             bottom: 13%;
@@ -152,13 +155,13 @@
     }
     .seo-icon-1{
         @extend %posabsolute;
-        right: 17%;
+        right: 15%;
         top: 26%;
         @extend %zindex2;
     }
     .seo-icon-2{
         @extend %posabsolute;
-        right: 7%;
+        right: 4%;
         top: 27%;
         @extend %zindex2;
     }
@@ -176,7 +179,7 @@
     }
     .slide-grid{
         @extend %posabsolute;
-        right: 10%;
+        right: 7%;
         top: 50%;
         @extend %zindex2;
     }
@@ -254,8 +257,15 @@
 		
 		a {
 			font-size: 0.8em;
-			color: #25a9c1;
-			
+            color: #fff;
+            border-color: #fff;
+            margin-top: 20px;
+            &:hover::after{
+                background-color: #fff;
+            }
+            &:hover{
+                @extend %primary-color;
+            }
 		}
     }
     @include all-below-med(){

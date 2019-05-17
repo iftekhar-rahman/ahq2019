@@ -455,8 +455,11 @@ select {
   .homepage-slides-area {
     margin-top: 70px; } }
 .homepage-slides-area .slide-car {
-  right: 6%;
+  right: 3%;
   bottom: -5px; }
+  @media (min-width: 1200px) and (max-width: 1500px) {
+    .homepage-slides-area .slide-car {
+      right: 1%; } }
 .homepage-slides-area .slide-round {
   left: 2%;
   top: 42%; }
@@ -506,8 +509,8 @@ select {
       left: 2%;
       bottom: 18%; } }
 .homepage-slides-area .statistic-icon {
-  right: 9%;
-  top: 45%; }
+  right: 8%;
+  top: 44%; }
   @media (max-width: 575px) {
     .homepage-slides-area .statistic-icon {
       bottom: 13%;
@@ -525,10 +528,10 @@ select {
       left: 20%;
       bottom: 7%; } }
 .homepage-slides-area .seo-icon-1 {
-  right: 17%;
+  right: 15%;
   top: 26%; }
 .homepage-slides-area .seo-icon-2 {
-  right: 7%;
+  right: 4%;
   top: 27%; }
 .homepage-slides-area .hero-shape-2 {
   right: 32%;
@@ -537,7 +540,7 @@ select {
   right: 18%;
   top: 30%; }
 .homepage-slides-area .slide-grid {
-  right: 10%;
+  right: 7%;
   top: 50%; }
 
 .single-slide-item {
@@ -604,7 +607,11 @@ select {
         margin-right: 343px; } }
     .single-slide-item .slide-text a {
       font-size: 0.8em;
-      color: #25a9c1; }
+      color: #fff;
+      border-color: #fff;
+      margin-top: 20px; }
+      .single-slide-item .slide-text a:hover::after {
+        background-color: #fff; }
   @media (max-width: 991px) {
     .single-slide-item {
       font-size: 18px;
@@ -1578,7 +1585,7 @@ BG 9-5-19
 /*****************************
 00. Color CSS
 *****************************/
-.owl-nav div, select, .mainmenu ul li a:hover, .scroll-to-top, .boxed-btn, input[type="submit"], button[type="submit"], .social-media-management-area .boxed-btn:hover, .reputation-management-area .boxed-btn:hover, .quicklinks-area li a:hover, .hero-area .hero-text, .hero-area .hero-text h1 {
+.owl-nav div, select, .mainmenu ul li a:hover, .scroll-to-top, .boxed-btn, input[type="submit"], button[type="submit"], .single-slide-item .slide-text a:hover, .social-media-management-area .boxed-btn:hover, .reputation-management-area .boxed-btn:hover, .quicklinks-area li a:hover, .hero-area .hero-text, .hero-area .hero-text h1 {
   color: #25a9c1; }
 
 .owl-dots div, .footer-area, .boxed-btn:after, input[type="submit"]:after, button[type="submit"]:after {
