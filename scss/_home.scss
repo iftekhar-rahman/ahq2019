@@ -5,6 +5,7 @@
 /*============== .homepage-slides-area  ================*/
 .homepage-slides-area, .single-slide-item {
     height: 820px;
+    margin-bottom: 65px;
     @include mx-mobile(){
         height: 260px !important;
     };
@@ -15,9 +16,9 @@
         height: 450px;
     };
 }
-.slide-bg-1{background-image: url(../img/slide-1.jpg)}
-.slide-bg-2{background-image: url(../img/slide-2.jpg)}
-.slide-bg-3{background-image: url(../img/slide-3.jpg)}
+.slide-bg-1{background-image: url(../img/slide-bg-1.jpg)}
+.slide-bg-2{background-image: url(../img/slide-bg-2.jpg)}
+.slide-bg-3{background-image: url(../img/slide-bg-3.jpg)}
 
 .col-lg-9 { /* Stop the bckground interfering with the slidr text */
 	padding-right: 10%;
@@ -35,10 +36,16 @@
     @include all-below-med(){
         margin-top: 70px;
     };
-    .bmw-shapes{
+    .slide-car{
         @extend %posabsolute;
-        right: 11.5%;
-        top: 25%;
+        right: 6%;
+        bottom: -5px;
+        @extend %zindex2;
+    }
+    .slide-round{
+        @extend %posabsolute;
+        left: 2%;
+        top: 42%;
         @extend %zindex2;
         @include all-below-med(){
             display: none;
@@ -52,10 +59,44 @@
             right: 12%;
         };
     }
-    .bmw-cross1{
+    .slide-round-2{
         @extend %posabsolute;
-        left: 5%;
-        bottom: 27%;
+        left: 7%;
+        bottom: 25%;
+        @extend %zindex2;
+        // @include all-below-med(){
+        //     display: none;
+        // };
+        // @include mx-desktops(){
+        //     right: 5%;
+        //     width: 380px
+        // };
+        // @include mx-large-desktops(){
+        //     width: 370px;
+        //     right: 12%;
+        // };
+    }
+    .slide-round-3{
+        @extend %posabsolute;
+        left: 7%;
+        top: 37%;
+        @extend %zindex2;
+        // @include all-below-med(){
+        //     display: none;
+        // };
+        // @include mx-desktops(){
+        //     right: 5%;
+        //     width: 380px
+        // };
+        // @include mx-large-desktops(){
+        //     width: 370px;
+        //     right: 12%;
+        // };
+    }
+    .target-icon{
+        @extend %posabsolute;
+        right: 22%;
+        top: 23%;
         @extend %zindex2; 
         @include mx-mobile(){
             bottom: 14%;
@@ -85,10 +126,10 @@
             bottom: 18%;
         };
     }
-    .bmw-cross2{
+    .statistic-icon{
         @extend %posabsolute;
-        left: 10%;
-        bottom: 14%;
+        right: 9%;
+        top: 45%;
         @extend %zindex2; 
         @include mx-mobile(){
             bottom: 13%;
@@ -109,10 +150,40 @@
             bottom: 7%;
         };
     }
+    .seo-icon-1{
+        @extend %posabsolute;
+        right: 17%;
+        top: 26%;
+        @extend %zindex2;
+    }
+    .seo-icon-2{
+        @extend %posabsolute;
+        right: 7%;
+        top: 27%;
+        @extend %zindex2;
+    }
+    .hero-shape-2{
+        @extend %posabsolute;
+        right: 32%;
+        top: 19%;
+        @extend %zindex2;
+    }
+    .slide-round-shape-2{
+        @extend %posabsolute;
+        right: 18%;
+        top: 30%;
+        @extend %zindex2;
+    }
+    .slide-grid{
+        @extend %posabsolute;
+        right: 10%;
+        top: 50%;
+        @extend %zindex2;
+    }
 }
 .single-slide-item {
     @extend %backgroundimage;
-    @extend %slide-text-color;
+    @extend %white-color;
     font-size: 27px;
     @include mx-tablet(){
         padding-bottom: 40px;
@@ -129,7 +200,7 @@
     h2 {
         font-size: 67px;
         @extend %uppercase;
-        @extend %primary-color;
+        @extend %white-color;
         @include all-below-med(){
             font-size: 30px;
         };
@@ -138,11 +209,11 @@
         };
     }
     h3 {
-        @extend %primary-color;
+        @extend %white-color;
         font-size: 37px;
         font-weight: 400;
         margin-bottom: 42px;
-        
+        margin-right: 185px;
         @include all-below-med(){
             font-size: 24px;
         };
@@ -176,7 +247,7 @@
             margin-right: 15px;
         };
         @include mx-extra-large-desktops(){
-            margin-right: 20px;
+            margin-right: 343px;
         };
         @extend %posrelative;
         z-index: 3;
@@ -204,15 +275,15 @@
     @include mx-tablet(){
         margin-right: 200px;
     }; 
-    @include mx-desktops(){
-        margin-right: 100px;
-    }; 
-    @include mx-large-desktops(){
-        margin-right: 90px;
-    };
-    @include mx-extra-large-desktops(){
-        margin-right: 90px;
-    };
+    // @include mx-desktops(){
+    //     margin-right: 100px;
+    // }; 
+    // @include mx-large-desktops(){
+    //     margin-right: 90px;
+    // };
+    // @include mx-extra-large-desktops(){
+    //     margin-right: 90px;
+    // };
 }
 .homepage-slides-area .owl-dots {
     @extend %textleft;
@@ -220,7 +291,7 @@
     @extend %posrelative;
     width: 1110px;
     @extend %margin0auto;
-    bottom: 55px;
+    bottom: 120px;
     @include mx-desktops(){
         width: 935px;
     };
@@ -270,7 +341,7 @@
         bottom: -27px;
         width: 130px;
         height: 1px;
-        @extend %primary-bg-color;
+        @extend %white-bg-color;
         @include mx-mobile(){
             display: none;
         };
@@ -366,11 +437,54 @@
         transform: translate3d(0, 0, 0);
     }
 }
+
+@-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 60%, 0);
+      transform: translate3d(0, 60%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+// @-webkit-keyframes fadeInLeft {
+//     from {
+//         opacity: 0;
+//         -webkit-transform: translate3d(-100%, 0, 0);
+//         transform: translate3d(-100%, 0, 0);
+//     }
+//     to {
+//         opacity: 1;
+//         -webkit-transform: translate3d(0, 0, 0);
+//         transform: translate3d(0, 0, 0);
+//     }
+// }
+// @keyframes fadeInLeft {
+//     from {
+//         opacity: 0;
+//         -webkit-transform: translate3d(-100%, 0, 0);
+//         transform: translate3d(-100%, 0, 0);
+//     }
+//     to {
+//         opacity: 1;
+//         -webkit-transform: translate3d(0, 0, 0);
+//         transform: translate3d(0, 0, 0);
+//     }
+// }
+
 .homepage-slides-wrap .owl-item.active .fade-left{
     animation: fadeInLeft 2s 1;
 }
 .homepage-slides-wrap .owl-item.active .fade-right{
     animation: fadeInRight 2s 1;
+}
+.homepage-slides-wrap .owl-item.active .fade-Inup{
+    animation: fadeInUp 3s 1;
 }
 
 

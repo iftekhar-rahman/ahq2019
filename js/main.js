@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 		loop: true,
 		nav: false,
 		dots: true,
-        autoplay: true,
+        autoplay: false,
 		autoplayTimeout:10000,
 		autoplayHoverPause:true,	
         dotsData: true,

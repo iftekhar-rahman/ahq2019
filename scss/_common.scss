@@ -45,7 +45,7 @@ input, textarea{
     };
 }
 .section-title-2 {
-    color: #323232;
+    @extend %secondary-color;
     font-size: 32px;
     font-weight: 500;
     line-height: 1.3;
@@ -65,27 +65,27 @@ input, textarea{
 .owl-dots div {
     height: 5px;
     width: 5px;
-    background-color: #BBBBBB;
-    display: inline-block;
+    @extend %primary-bg-color;
+    @extend %displayinline;
+    @extend %borderradius50;
     margin: 0 5px;
-    border-radius: 50%;
 }
 .owl-dots {
-    text-align: center;
+    @extend %textcenter;
 }
 .owl-dots div.active {
-    background-color: #0DA0F4;
+    @extend %primary-deep-color;
 }
 
 /*
 =====owl nav customization======
 */
 .owl-nav div {
-    display: inline-block;
-    position: absolute;
+    @extend %displayinline;
+    @extend %posabsolute;
+    @extend %primary-color;
     left: 0px;
     top: 50%;
-    color: #ADADAD;
     font-size: 50px;
     line-height: 60px;
     margin-top: -35px;
@@ -95,14 +95,14 @@ input, textarea{
     right: 0px;
 }
 .owl-nav div:hover {
-    color: #0DA0F4;
+    @extend %primary-deep-color;
 }
 
 select {
     font-size: 19px;
-    color: #0da0f4;
-    background-color: #fff;
-    border-radius: 5px;
+    @extend %primary-color;
+    @extend %white-bg-color;
+    @extend %borderradius5;
     border: 0;
     padding: 8px 10px;
 }

@@ -19,7 +19,10 @@
 .service-area, .about-area {
   padding: 90px 0; }
 
-.service-area .about-img img, .about-area .about-img img, .casestudies-area .casestudies-img img, .we-are-area-1 .we-are-photo img, .customers-demands-area .customers-demand img, .smart-search-area .smart-search-photo img {
+.owl-dots div {
+  border-radius: 50%; }
+
+select, .service-area .about-img img, .about-area .about-img img, .casestudies-area .casestudies-img img, .we-are-area-1 .we-are-photo img, .customers-demands-area .customers-demand img, .smart-search-area .smart-search-photo img {
   border-radius: 5px; }
 
 .homepage-slides-area .owl-dots {
@@ -32,13 +35,13 @@
 .mainmenu ul li a, .owl-carousel.owl-loaded, .owl-carousel .owl-stage::after, .contact-area .phone-number {
   display: block; }
 
-.mainmenu ul li, .quicklinks-area li {
+.owl-dots div, .owl-nav div, .mainmenu ul li, .quicklinks-area li {
   display: inline-block; }
 
 .boxed-btn, input[type="submit"], button[type="submit"], .homepage-slides-area, .single-slide-item .slide-text, .slide-title, .homepage-slides-area .owl-dots, .hborder, .owl-carousel, .owl-carousel .owl-stage, .owl-carousel .owl-stage-outer, .dealer-management-area .container, .dealer-management-area .dealer-management-car, .dealer-management-area .dealer-management-text, .social-media-management-area, .lead-generation-area, .reputation-management-area, .hero-area, .service-area, .about-area, .casestudies-area, .hero-area-2, .customers-demands-area, .social-media-area, .contact-area {
   position: relative; }
 
-.homepage-slides-area .bmw-shapes, .homepage-slides-area .bmw-cross1, .homepage-slides-area .bmw-cross2, .dealer-management-area .dealer-pluses, .social-media-management-area .hatched-circle, .social-media-management-area .social-plus, .lead-generation-area .series-dots, .lead-generation-area .waves, .reputation-management-area .reputaion-cross1, .reputation-management-area .reputaion-cross2, .hero-area .hero-shape, .hero-area .round-shape1, .service-area .about-grid, .about-area .about-grid, .casestudies-area .casestudies-round-shape, .hero-area-2 .car-photo, .customers-demands-area .cstd-shape, .customers-demands-area .round-3, .social-media-area .scm-grid, .contact-area .cta-grid, .contact-area .cta-round-1, .contact-area .cta-round-2 {
+.owl-nav div, .homepage-slides-area .slide-car, .homepage-slides-area .slide-round, .homepage-slides-area .slide-round-2, .homepage-slides-area .slide-round-3, .homepage-slides-area .target-icon, .homepage-slides-area .statistic-icon, .homepage-slides-area .seo-icon-1, .homepage-slides-area .seo-icon-2, .homepage-slides-area .hero-shape-2, .homepage-slides-area .slide-round-shape-2, .homepage-slides-area .slide-grid, .dealer-management-area .dealer-pluses, .social-media-management-area .hatched-circle, .social-media-management-area .social-plus, .lead-generation-area .series-dots, .lead-generation-area .waves, .reputation-management-area .reputaion-cross1, .reputation-management-area .reputaion-cross2, .hero-area .hero-shape, .hero-area .round-shape1, .service-area .about-grid, .about-area .about-grid, .casestudies-area .casestudies-round-shape, .hero-area-2 .car-photo, .customers-demands-area .cstd-shape, .customers-demands-area .round-3, .social-media-area .scm-grid, .contact-area .cta-grid, .contact-area .cta-round-1, .contact-area .cta-round-2 {
   position: absolute; }
 
 .scroll-to-top {
@@ -58,7 +61,7 @@
   content: "";
   z-index: -1; }
 
-.homepage-slides-area .bmw-shapes, .homepage-slides-area .bmw-cross1, .homepage-slides-area .bmw-cross2, .homepage-slides-area .owl-dots, .dealer-management-area .dealer-management-car, .casestudies-area .casestudies-round-shape, .hero-area-2 .hero-shape {
+.homepage-slides-area .slide-car, .homepage-slides-area .slide-round, .homepage-slides-area .slide-round-2, .homepage-slides-area .slide-round-3, .homepage-slides-area .target-icon, .homepage-slides-area .statistic-icon, .homepage-slides-area .seo-icon-1, .homepage-slides-area .seo-icon-2, .homepage-slides-area .hero-shape-2, .homepage-slides-area .slide-round-shape-2, .homepage-slides-area .slide-grid, .homepage-slides-area .owl-dots, .dealer-management-area .dealer-management-car, .casestudies-area .casestudies-round-shape, .hero-area-2 .hero-shape {
   z-index: 2; }
 
 .hborder:after {
@@ -91,8 +94,11 @@ a, button, img, input, span, .footer-area a:hover, .scroll-to-top, .boxed-btn:af
 .homepage-slides-area .owl-dots {
   text-align: left; }
 
-.scroll-to-top, .homepage-slides-area .owl-dots div, .dealer-management-area .dealer-management-car {
+.owl-dots, .scroll-to-top, .homepage-slides-area .owl-dots div, .dealer-management-area .dealer-management-car {
   text-align: center; }
+
+.owl-dots div {
+  border-radius: 50%; }
 
 /*****************************
 00. Function CSS
@@ -187,7 +193,6 @@ input[type="submit"], button[type="submit"] {
       font-weight: 500; } }
 
 .section-title-2 {
-  color: #323232;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.3; }
@@ -203,26 +208,14 @@ input[type="submit"], button[type="submit"] {
 .owl-dots div {
   height: 5px;
   width: 5px;
-  background-color: #BBBBBB;
-  display: inline-block;
-  margin: 0 5px;
-  border-radius: 50%; }
-
-.owl-dots {
-  text-align: center; }
-
-.owl-dots div.active {
-  background-color: #0DA0F4; }
+  margin: 0 5px; }
 
 /*
 =====owl nav customization======
 */
 .owl-nav div {
-  display: inline-block;
-  position: absolute;
   left: 0px;
   top: 50%;
-  color: #ADADAD;
   font-size: 50px;
   line-height: 60px;
   margin-top: -35px; }
@@ -231,14 +224,8 @@ input[type="submit"], button[type="submit"] {
   left: auto;
   right: 0px; }
 
-.owl-nav div:hover {
-  color: #0DA0F4; }
-
 select {
   font-size: 19px;
-  color: #0da0f4;
-  background-color: #fff;
-  border-radius: 5px;
   border: 0;
   padding: 8px 10px; }
 
@@ -436,7 +423,8 @@ select {
 *****************************/
 /*============== .homepage-slides-area  ================*/
 .homepage-slides-area, .single-slide-item {
-  height: 820px; }
+  height: 820px;
+  margin-bottom: 65px; }
   @media (max-width: 575px) {
     .homepage-slides-area, .single-slide-item {
       height: 260px !important; } }
@@ -448,13 +436,13 @@ select {
       height: 450px; } }
 
 .slide-bg-1 {
-  background-image: url(../img/slide-1.jpg); }
+  background-image: url(../img/slide-bg-1.jpg); }
 
 .slide-bg-2 {
-  background-image: url(../img/slide-2.jpg); }
+  background-image: url(../img/slide-bg-2.jpg); }
 
 .slide-bg-3 {
-  background-image: url(../img/slide-3.jpg); }
+  background-image: url(../img/slide-bg-3.jpg); }
 
 .col-lg-9 {
   /* Stop the bckground interfering with the slidr text */
@@ -466,67 +454,91 @@ select {
 @media (max-width: 991px) {
   .homepage-slides-area {
     margin-top: 70px; } }
-.homepage-slides-area .bmw-shapes {
-  right: 11.5%;
-  top: 25%; }
+.homepage-slides-area .slide-car {
+  right: 6%;
+  bottom: -5px; }
+.homepage-slides-area .slide-round {
+  left: 2%;
+  top: 42%; }
   @media (max-width: 991px) {
-    .homepage-slides-area .bmw-shapes {
+    .homepage-slides-area .slide-round {
       display: none; } }
   @media (min-width: 992px) and (max-width: 1199px) {
-    .homepage-slides-area .bmw-shapes {
+    .homepage-slides-area .slide-round {
       right: 5%;
       width: 380px; } }
   @media (min-width: 1200px) and (max-width: 1500px) {
-    .homepage-slides-area .bmw-shapes {
+    .homepage-slides-area .slide-round {
       width: 370px;
       right: 12%; } }
-.homepage-slides-area .bmw-cross1 {
-  left: 5%;
-  bottom: 27%; }
+.homepage-slides-area .slide-round-2 {
+  left: 7%;
+  bottom: 25%; }
+.homepage-slides-area .slide-round-3 {
+  left: 7%;
+  top: 37%; }
+.homepage-slides-area .target-icon {
+  right: 22%;
+  top: 23%; }
   @media (max-width: 575px) {
-    .homepage-slides-area .bmw-cross1 {
+    .homepage-slides-area .target-icon {
       bottom: 14%;
       left: 5%; }
-      .homepage-slides-area .bmw-cross1 img {
+      .homepage-slides-area .target-icon img {
         max-width: 50px; } }
   @media (min-width: 576px) and (max-width: 767px) {
-    .homepage-slides-area .bmw-cross1 {
+    .homepage-slides-area .target-icon {
       bottom: 14%;
       left: 12%; }
-      .homepage-slides-area .bmw-cross1 img {
+      .homepage-slides-area .target-icon img {
         max-width: 50px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .homepage-slides-area .bmw-cross1 {
+    .homepage-slides-area .target-icon {
       left: 7%;
       bottom: 9%;
       /* display: none; */
       width: 62px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
-    .homepage-slides-area .bmw-cross1 {
+    .homepage-slides-area .target-icon {
       display: none; } }
   @media (min-width: 1200px) and (max-width: 1500px) {
-    .homepage-slides-area .bmw-cross1 {
+    .homepage-slides-area .target-icon {
       left: 2%;
       bottom: 18%; } }
-.homepage-slides-area .bmw-cross2 {
-  left: 10%;
-  bottom: 14%; }
+.homepage-slides-area .statistic-icon {
+  right: 9%;
+  top: 45%; }
   @media (max-width: 575px) {
-    .homepage-slides-area .bmw-cross2 {
+    .homepage-slides-area .statistic-icon {
       bottom: 13%;
       left: 26%; }
-      .homepage-slides-area .bmw-cross2 img {
+      .homepage-slides-area .statistic-icon img {
         max-width: 30px; } }
   @media (min-width: 576px) and (max-width: 767px) {
-    .homepage-slides-area .bmw-cross2 {
+    .homepage-slides-area .statistic-icon {
       bottom: 13%;
       left: 26%; }
-      .homepage-slides-area .bmw-cross2 img {
+      .homepage-slides-area .statistic-icon img {
         max-width: 30px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .homepage-slides-area .bmw-cross2 {
+    .homepage-slides-area .statistic-icon {
       left: 20%;
       bottom: 7%; } }
+.homepage-slides-area .seo-icon-1 {
+  right: 17%;
+  top: 26%; }
+.homepage-slides-area .seo-icon-2 {
+  right: 7%;
+  top: 27%; }
+.homepage-slides-area .hero-shape-2 {
+  right: 32%;
+  top: 19%; }
+.homepage-slides-area .slide-round-shape-2 {
+  right: 18%;
+  top: 30%; }
+.homepage-slides-area .slide-grid {
+  right: 10%;
+  top: 50%; }
 
 .single-slide-item {
   font-size: 27px; }
@@ -553,7 +565,8 @@ select {
   .single-slide-item h3 {
     font-size: 37px;
     font-weight: 400;
-    margin-bottom: 42px; }
+    margin-bottom: 42px;
+    margin-right: 185px; }
     @media (max-width: 991px) {
       .single-slide-item h3 {
         font-size: 24px; } }
@@ -588,7 +601,7 @@ select {
         margin-right: 15px; } }
     @media (min-width: 1500px) {
       .single-slide-item .slide-text {
-        margin-right: 20px; } }
+        margin-right: 343px; } }
     .single-slide-item .slide-text a {
       font-size: 0.8em;
       color: #25a9c1; }
@@ -608,19 +621,10 @@ select {
   @media (min-width: 768px) and (max-width: 991px) {
     .slide-title {
       margin-right: 200px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .slide-title {
-      margin-right: 100px; } }
-  @media (min-width: 1200px) and (max-width: 1500px) {
-    .slide-title {
-      margin-right: 90px; } }
-  @media (min-width: 1500px) {
-    .slide-title {
-      margin-right: 90px; } }
 
 .homepage-slides-area .owl-dots {
   width: 1110px;
-  bottom: 55px; }
+  bottom: 120px; }
   @media (min-width: 992px) and (max-width: 1199px) {
     .homepage-slides-area .owl-dots {
       width: 935px; } }
@@ -730,11 +734,23 @@ select {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 60%, 0);
+    transform: translate3d(0, 60%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 .homepage-slides-wrap .owl-item.active .fade-left {
   animation: fadeInLeft 2s 1; }
 
 .homepage-slides-wrap .owl-item.active .fade-right {
   animation: fadeInRight 2s 1; }
+
+.homepage-slides-wrap .owl-item.active .fade-Inup {
+  animation: fadeInUp 3s 1; }
 
 /*===================.dealer-management-area========================*/
 .dealer-management-bg {
@@ -1532,25 +1548,25 @@ BG 9-5-19
 /*****************************
 00. Color CSS
 *****************************/
-.mainmenu ul li a:hover, .scroll-to-top, .boxed-btn, input[type="submit"], button[type="submit"], .single-slide-item h2, .single-slide-item h3, .social-media-management-area .boxed-btn:hover, .reputation-management-area .boxed-btn:hover, .quicklinks-area li a:hover, .hero-area .hero-text, .hero-area .hero-text h1 {
+.owl-nav div, select, .mainmenu ul li a:hover, .scroll-to-top, .boxed-btn, input[type="submit"], button[type="submit"], .social-media-management-area .boxed-btn:hover, .reputation-management-area .boxed-btn:hover, .quicklinks-area li a:hover, .hero-area .hero-text, .hero-area .hero-text h1 {
   color: #25a9c1; }
 
-.footer-area, .boxed-btn:after, input[type="submit"]:after, button[type="submit"]:after, .hborder:after {
+.owl-dots div, .footer-area, .boxed-btn:after, input[type="submit"]:after, button[type="submit"]:after {
   background-color: #25a9c1; }
+
+.owl-dots div.active, .owl-nav div:hover {
+  color: #086475; }
 
 .scroll-to-top:hover, .homepage-slides-area .owl-dots div.active {
   background-color: #086475; }
 
-.section-title, .footer-area a:hover, .boxed-btn2 {
+.section-title, .section-title-2, .footer-area a:hover, .boxed-btn2 {
   color: #323232; }
 
-.single-slide-item {
-  color: #29293d; }
-
-.footer-area, .footer-area a, .scroll-to-top:hover, .boxed-btn:hover, input[type="submit"]:hover, button[type="submit"]:hover, .homepage-slides-area .owl-dots div, .social-media-management-area, .social-media-management-area .section-title, .social-media-management-area .boxed-btn, .reputation-management-area, .reputation-management-area .section-title, .reputation-management-area .boxed-btn, .hero-area-2 .hero-text.hero-tex-2 h1, .hero-area-2 .hero-text.hero-tex-2 {
+.footer-area, .footer-area a, .scroll-to-top:hover, .boxed-btn:hover, input[type="submit"]:hover, button[type="submit"]:hover, .single-slide-item, .single-slide-item h2, .single-slide-item h3, .homepage-slides-area .owl-dots div, .social-media-management-area, .social-media-management-area .section-title, .social-media-management-area .boxed-btn, .reputation-management-area, .reputation-management-area .section-title, .reputation-management-area .boxed-btn, .hero-area-2 .hero-text.hero-tex-2 h1, .hero-area-2 .hero-text.hero-tex-2 {
   color: #ffffff; }
 
-.scroll-to-top, .social-media-management-area .boxed-btn:after, .reputation-management-area .boxed-btn:after, .hero-area-2 .hborder:after {
+select, .scroll-to-top, .hborder:after, .social-media-management-area .boxed-btn:after, .reputation-management-area .boxed-btn:after, .hero-area-2 .hborder:after {
   background-color: #ffffff; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
