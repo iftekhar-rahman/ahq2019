@@ -743,6 +743,33 @@ select {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 60%, 0);
+    transform: translate3d(0, 60%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 .homepage-slides-wrap .owl-item.active .fade-left {
   animation: fadeInLeft 2s 1; }
 
@@ -751,6 +778,9 @@ select {
 
 .homepage-slides-wrap .owl-item.active .fade-Inup {
   animation: fadeInUp 3s 1; }
+
+.homepage-slides-wrap .owl-item.active .fade-Indown {
+  animation: fadeInDown 2s 1; }
 
 /*===================.dealer-management-area========================*/
 .dealer-management-bg {
